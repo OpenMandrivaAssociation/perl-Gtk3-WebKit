@@ -1,5 +1,5 @@
 %define	modname	Gtk3-WebKit
-%define	modver	0.05
+%define	modver	0.06
 
 %define perl_glib_require 1.240
 %define gtk_require 2.22.1
@@ -47,6 +47,6 @@ perl Makefile.PL INSTALLDIRS=vendor
 %makeinstall_std
 
 %files
-%doc COPYING Changes META.json META.yml MYMETA.yml README examples
+%doc COPYING Changes MYMETA.json META.yml MYMETA.yml README examples
 %{perl_vendorlib}/Gtk3/WebKit*
 %{_mandir}/*/*
