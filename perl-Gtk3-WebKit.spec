@@ -23,6 +23,7 @@ BuildRequires:	perl(Glib::Object::Introspection)
 BuildRequires:	perl(Gtk3)
 BuildRequires:	perl(Test::NeedsDisplay)
 BuildRequires:	perl-devel
+BuildRequires:	typelib(WebKit) = 3.0
 Requires:	typelib(WebKit) = 3.0
 
 %description
@@ -44,6 +45,9 @@ perl Makefile.PL INSTALLDIRS=vendor
 
 %install
 %makeinstall_std
+
+%check
+%make test
 
 %files
 %doc COPYING Changes MYMETA.json META.yml MYMETA.yml README examples
