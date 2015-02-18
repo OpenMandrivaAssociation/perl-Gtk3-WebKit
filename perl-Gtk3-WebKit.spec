@@ -16,14 +16,13 @@ Source0:	http://www.cpan.org/authors/id/P/PO/POTYL/%{modname}-%{modver}.tar.gz
 
 BuildArch:	noarch
 
+BuildRequires:	perl(ExtUtils::Depends) >= 0.300
 BuildRequires:	perl(ExtUtils::MakeMaker)
+BuildRequires:	perl(ExtUtils::PkgConfig) >= 1.03
 BuildRequires:	perl(Glib::Object::Introspection)
 BuildRequires:	perl(Gtk3)
 BuildRequires:	perl(Test::NeedsDisplay)
 BuildRequires:	perl-devel
-BuildRequires:	perl-ExtUtils-Depends >= 0.300
-BuildRequires:	perl-ExtUtils-PkgConfig >= 1.03
-BuildRequires:	perl-Glib-Object-Introspection >= 0.002
 Requires:	typelib(WebKit) = 3.0
 
 %description
