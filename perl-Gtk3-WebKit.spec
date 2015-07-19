@@ -6,7 +6,7 @@
 
 Name:		perl-%{modname}
 Version:	%{perl_convert_version %{modver}}
-Release:	2
+Release:	3
 
 Summary:	Perl module for the webkit-3.x library
 License:	LGPLv2+ or Artistic
