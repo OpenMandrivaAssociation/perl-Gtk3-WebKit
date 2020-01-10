@@ -53,7 +53,7 @@ supports DOM, XMLHttpRequest, XSLT, CSS, Javascript/ECMAscript and more.
 
 %prep
 %setup -q -n %{modname}-%{modver}
-%apply_patches
+%autopatch -p1
 
 %build
 perl Makefile.PL INSTALLDIRS=vendor
