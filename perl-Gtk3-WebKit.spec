@@ -52,7 +52,7 @@ It is able to display content such as HTML, SVG, XML, and others. It also
 supports DOM, XMLHttpRequest, XSLT, CSS, Javascript/ECMAscript and more.
 
 %prep
-%setup -q -n %{modname}-%{modver}
+%autosetup -p1 -n %{modname}-%{modver}
 %autopatch -p1
 
 %build
@@ -60,7 +60,7 @@ perl Makefile.PL INSTALLDIRS=vendor
 %make OPTIMIZE="%{optflags}"
 
 %install
-%makeinstall_std
+%make_install
 
 %check
 %make test
@@ -68,8 +68,8 @@ perl Makefile.PL INSTALLDIRS=vendor
 %files
 %doc COPYING Changes MYMETA.json META.yml MYMETA.yml README examples
 %{perl_vendorlib}/Gtk3/WebKit.pm
-%{_mandir}/*/Gtk3::WebKit.*
+%doc %{_mandir}/*/Gtk3::WebKit.*
 
 %files -n perl-Gtk3-WebKit2
 %{perl_vendorlib}/Gtk3/WebKit2.pm
-%{_mandir}/*/Gtk3::WebKit2.*
+%doc %{_mandir}/*/Gtk3::WebKit2.*
