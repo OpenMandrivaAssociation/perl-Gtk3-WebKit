@@ -11,7 +11,7 @@ Release:	8
 Summary:	Perl module for the webkit-3.x library
 License:	LGPLv2+ or Artistic
 Group:		Development/GNOME and GTK+
-Url:		http://search.cpan.org/dist/Gtk3-WebKit/
+Url:		https://search.cpan.org/dist/Gtk3-WebKit/
 Source0:	http://www.cpan.org/authors/id/P/PO/POTYL/%{modname}-%{modver}.tar.gz
 Patch0:		WebKit2.diff
 BuildArch:	noarch
