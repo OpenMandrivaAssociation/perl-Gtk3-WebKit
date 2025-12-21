@@ -16,6 +16,7 @@ Source0:	http://www.cpan.org/authors/id/P/PO/POTYL/%{modname}-%{modver}.tar.gz
 Patch0:		WebKit2.diff
 BuildArch:	noarch
 
+BuildRequires:	make
 BuildRequires:	perl(ExtUtils::Depends) >= 0.300
 BuildRequires:	perl(ExtUtils::MakeMaker)
 BuildRequires:	perl(ExtUtils::PkgConfig) >= 1.03
