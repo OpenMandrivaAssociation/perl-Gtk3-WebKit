@@ -1,18 +1,16 @@
 %define	modname	Gtk3-WebKit
-%define	modver	0.06
-
 %define perl_glib_require 1.240
 %define gtk_require 2.22.1
 
 Name:		perl-%{modname}
-Version:	%{perl_convert_version %{modver}}
-Release:	8
+Version:	0.06
+Release:	9
 
 Summary:	Perl module for the webkit-3.x library
 License:	LGPLv2+ or Artistic
 Group:		Development/GNOME and GTK+
-Url:		https://search.cpan.org/dist/Gtk3-WebKit/
-Source0:	http://www.cpan.org/authors/id/P/PO/POTYL/%{modname}-%{modver}.tar.gz
+Url:		https://metacpan.org/dist/Gtk3-WebKit/
+Source0:	http://www.cpan.org/authors/id/P/PO/POTYL/%{modname}-%{version}.tar.gz
 Patch0:		WebKit2.diff
 BuildArch:	noarch
 
@@ -53,7 +51,7 @@ It is able to display content such as HTML, SVG, XML, and others. It also
 supports DOM, XMLHttpRequest, XSLT, CSS, Javascript/ECMAscript and more.
 
 %prep
-%autosetup -p1 -n %{modname}-%{modver}
+%autosetup -p1 -n %{modname}-%{version}
 %autopatch -p1
 
 %build
