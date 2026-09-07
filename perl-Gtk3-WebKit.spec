@@ -4,7 +4,7 @@
 
 Name:		perl-%{modname}
 Version:	0.06
-Release:	9
+Release:	10
 
 Summary:	Perl module for the webkit-3.x library
 License:	LGPLv2+ or Artistic
@@ -38,7 +38,7 @@ supports DOM, XMLHttpRequest, XSLT, CSS, Javascript/ECMAscript and more.
 %package -n perl-Gtk3-WebKit2
 Summary:	Perl module for the webkit-4.x library
 Group:		Development/GNOME and GTK+
-Requires:	typelib(WebKit2) = 4.0
+Requires:	typelib(WebKit2) = 4.1
 
 %description -n perl-Gtk3-WebKit2
 This module provides the Perl bindings for the Gtk port of WebKit.
@@ -52,11 +52,10 @@ supports DOM, XMLHttpRequest, XSLT, CSS, Javascript/ECMAscript and more.
 
 %prep
 %autosetup -p1 -n %{modname}-%{version}
-%autopatch -p1
 
 %build
 perl Makefile.PL INSTALLDIRS=vendor
-%make OPTIMIZE="%{optflags}"
+%make_build OPTIMIZE="%{optflags}"
 
 %install
 %make_install
